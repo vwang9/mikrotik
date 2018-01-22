@@ -6,3 +6,7 @@ set enabled=yes port=8080 max-cache-size=1048576
 #step 2. set firewall rules redict 80 traffic to transparent proxy
 /ip firewall nat
 add chain=dstnat src-address=192.168.0.192/29 protocol=tcp dst-port=80 action=redirect to-ports=8080
+
+#step 3. add log
+/system/logging
+add topics=account action=disk
