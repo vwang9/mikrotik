@@ -10,4 +10,3 @@ add chain=dstnat src-address=192.168.0.192/29 protocol=tcp dst-port=80 action=re
 #step 3. add log
 /system/logging
 add topics=account action=disk
-
